@@ -24,7 +24,7 @@ movies = JSON.parse(movies_serialized)["results"]
 poster_url = "https://image.tmdb.org/t/p/w500"
 
 movies.each do |movie|
-  Movie.create!(title: movie["title"], overview: movie["overview"], poster_url: "#{poster_url}#{movie["poster_path"]}", rating: movie["vote_average"].round(1))
+  Movie.create!(title: movie["title"], overview: movie["overview"], poster_url: "#{poster_url}#{movie["poster_path"]}", rating: movie["vote_average"].round(1), genre_id: movie["genre_ids"][0])
 end
 
 puts "Finished seeding with new movies!"

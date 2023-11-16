@@ -3,11 +3,61 @@
   gap: 16px;
   grid-template-columns: 1fr 1fr 1fr;
 }
-
+.card-container-big {
+  grid-template-columns: 1fr 1fr;
+}
+a {
+  color: black;
+  text-decoration: none !important;
+}
 .card {
-  height: 600px;
+  height: 300px;
   display: flex;
   justify-content: center;
   align-items: center;
   background-size: cover;
+  h2 {
+    font-weight: bold;
+    font-size: 2.5em;
+    color: #fcde4c;
+    padding: 0 16px;
+  }
+}
+.card-details {
+  height: 320px;
+  display: flex;
+  img {
+    object-fit: cover;
+    object-position: top;
+    height: 100%;
+    width: 30%;
+  }
+  h5 {
+    margin-bottom: 0;
+  }
+  .card-text {
+    position: relative;
+    height: 100%;
+    width: 70%;
+    border: 3px solid black;
+    padding: 8px;
+  }
+  .text-small {
+    font-size: 1rem;
+  }
+  .text-boxed {
+    margin-top: 8px;
+    padding-top: 8px;
+    border-top: 3px solid;
+  }
+  .text-footer {
+    width: 97%;
+    position: absolute;
+    bottom: 0px;
+    display: flex;
+    justify-content: space-between;
+    p {
+      line-height: 2em;
+    }
+  }
 }
