@@ -1,0 +1,15 @@
+.banner {
+  width: 100vw;
+  height: 50vh;
+  background-position-y: 25%;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  h2 {
+    color: #fcde4c;
+    -webkit-text-stroke: 3px black;
+    font-weight: bold;
+    font-size: 4em;
+  }
+}

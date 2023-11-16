@@ -1,0 +1,13 @@
+.card-container {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.card {
+  height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+}

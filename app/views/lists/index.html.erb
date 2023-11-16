@@ -1,0 +1,24 @@
+<div class="banner" style="background-image: url('<%= asset_path("cinema-interior.jpg") %>')">
+  <h2>List your favourite movies</h2>
+</div>
+
+<div class="container mt-3">
+  <div class="d-flex justify-content-between">
+    <h3>My Movie Lists</h3>
+    <%= link_to "Create a list", new_list_path, class: "btn btn-success" %>
+  </div>
+
+  <p>
+    <% if @lists.size === 0 %>
+      You don't currently have any lists to display.
+    <% else %>
+      <div class="card-container">
+        <% @lists.each do |list| %>
+          <div class="card" style="background-image: url('<%= list.movies.first.poster_url %>');">
+            <h5><%= link_to list.name, list_path(list) %></h5>
+          </div>
+        <% end %>
+      </div>
+    <% end %>
+  </p>
+</div>

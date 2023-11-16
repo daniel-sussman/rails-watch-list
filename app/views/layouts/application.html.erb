@@ -11,6 +11,21 @@
   </head>
 
   <body>
+    <nav class="navbar-lewagon">
+      <div class="navbar-collapse">
+        <div class="navbar-brand">
+          <img src="<%= asset_path("popcorn") %>" alt="logo">
+        </div>
+      </div>
+      <div class="d-flex justify-content-evenly align-items-center">
+        <div class="navbar-button">
+          <p><%= link_to "My lists", lists_path %></p>
+        </div>
+        <div class="navbar-button">
+          <p><%= link_to "New list", new_list_path %></p>
+        </div>
+      </div>
+    </nav>
     <%= yield %>
   </body>
 </html>
