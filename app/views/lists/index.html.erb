@@ -37,7 +37,7 @@
       You don't currently have any lists to display.
     </p>
   <% else %>
-    <div class="card-container">
+    <div class="card-container mb-3">
       <% @lists.each do |list| %>
         <% poster_url = list.movies.size > 0 ? genres[list.movies.first.genre_id.to_s] : list_image = asset_path("history_genre") %>
         <%= link_to list_path(list) do %>

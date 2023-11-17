@@ -39,10 +39,11 @@
 <div class="container my-3">
   <div class="d-flex justify-content-between mb-3">
     <div></div>
-    <%= link_to "add a movie", new_list_bookmark_path(@list), class: "btn btn-success" %>
+    <a href="#add-movie", class="btn btn-success">Add a movie</a>
+
   </div>
   <% if @list.bookmarks.size === 0 %>
-    Add some movies to this list!
+    <h5>(Add some movies to this list!)</h5>
   <% else %>
     <div class="card-container card-container-big">
       <% @list.bookmarks.each do |bookmark| %>
@@ -80,4 +81,8 @@
       <% end %>
     </div>
   <% end %>
+  </div>
+  <div class="container form">
+    <%= render "bookmark_form" %>
+  </div>
 </div>
