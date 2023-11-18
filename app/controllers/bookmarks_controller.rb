@@ -4,10 +4,10 @@ class BookmarksController < ApplicationController
     @bookmark = Bookmark.new(bookmark_params)
     @bookmark.list = @list
     if @bookmark.save
-      unless @list.photo.key
+      # unless @list.photo.key
         genre_id = find_most_common_genre(@list)
         @list.image_url = Genre.find(genre_id).image_url
-      end
+      # end
       @list.save
       redirect_to @list
     else
@@ -19,11 +19,11 @@ class BookmarksController < ApplicationController
   def destroy
     bookmark = Bookmark.find(params[:id])
     bookmark.destroy
-    unless bookmark.list.photo.key
+    # unless bookmark.list.photo.key
       genre_id = find_most_common_genre(bookmark.list)
       bookmark.list.image_url = Genre.find(genre_id).image_url
       bookmark.list.save
-    end
+    # end
     redirect_to bookmark.list
   end
 
