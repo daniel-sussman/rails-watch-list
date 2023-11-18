@@ -28,6 +28,6 @@ class ListsController < ApplicationController
   end
 
   def random_url
-    %w[action_genre adventure_genre animation_genre comedy_genre crime_genre documentary_genre drama_genre family_genre fantasy_genre history_genre horror_genre music_genre mystery_genre romance_genre sci-fi_genre thriller_genre TV-movie_genre war_genre western_genre].sample
+    %w[action_genre.jpg adventure_genre.jpg animation_genre.jpeg comedy_genre.png crime_genre.jpg documentary_genre.jpeg drama_genre.png family_genre.png fantasy_genre.jpg history_genre.jpg horror_genre.jpg music_genre.jpeg mystery_genre.png romance_genre.jpg sci-fi_genre.jpg thriller_genre.png TV-movie_genre.jpg war_genre.jpg western_genre.jpg].sample
   end
 end
