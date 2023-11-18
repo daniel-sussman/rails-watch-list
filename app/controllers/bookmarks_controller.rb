@@ -4,21 +4,26 @@ class BookmarksController < ApplicationController
     @bookmark = Bookmark.new(bookmark_params)
     @bookmark.list = @list
     if @bookmark.save
-      genre_id = find_most_common_genre(@list)
-      @list.image_url = Genre.find(genre_id).image_url
+      unless @list.photo.key
+        genre_id = find_most_common_genre(@list)
+        @list.image_url = Genre.find(genre_id).image_url
+      end
       @list.save
       redirect_to @list
     else
-      render :new, status: :unprocessable_entity
+      # The line below is failing to show the errors
+      render 'lists/show', status: :unprocessable_entity
     end
   end
 
   def destroy
     bookmark = Bookmark.find(params[:id])
     bookmark.destroy
-    genre_id = find_most_common_genre(bookmark.list)
+    unless bookmark.list.photo.key
+      genre_id = find_most_common_genre(bookmark.list)
       bookmark.list.image_url = Genre.find(genre_id).image_url
       bookmark.list.save
+    end
     redirect_to bookmark.list
   end
 
