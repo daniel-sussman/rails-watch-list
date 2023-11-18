@@ -18,25 +18,25 @@ Genre.destroy_all
 puts "Building list of movie genres..."
 
 genres = {
-  '28' => "action_genre",
-  '12' => "adventure_genre",
-  '16' => "animation_genre",
-  '35' => "comedy_genre",
-  '80' => "crime_genre",
-  '99' => "documentary_genre",
-  '18' => "drama_genre",
-  '10751' => "family_genre",
-  '14' => "fantasy_genre",
-  '36' => "history_genre",
-  '27' => "horror_genre",
-  '10402' => "music_genre",
-  '9648' => "mystery_genre",
-  '10749' => "romance_genre",
-  '878' => "sci-fi_genre",
-  '10770' => "thriller_genre",
-  '53' => "TV-movie_genre",
-  '10752' => "war_genre",
-  '37' => "western_genre"
+  '28' => "action_genre.jpg",
+  '12' => "adventure_genre.jpg",
+  '16' => "animation_genre.jpeg",
+  '35' => "comedy_genre.png",
+  '80' => "crime_genre.jpg",
+  '99' => "documentary_genre.jpeg",
+  '18' => "drama_genre.png",
+  '10751' => "family_genre.png",
+  '14' => "fantasy_genre.jpg",
+  '36' => "history_genre.jpg",
+  '27' => "horror_genre.jpg",
+  '10402' => "music_genre.jpeg",
+  '9648' => "mystery_genre.png",
+  '10749' => "romance_genre.jpg",
+  '878' => "sci-fi_genre.jpg",
+  '10770' => "thriller_genre.png",
+  '53' => "TV-movie_genre.jpg",
+  '10752' => "war_genre.jpg",
+  '37' => "western_genre.jpg"
 }
 
 genres.each do |genre|
