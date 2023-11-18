@@ -1,4 +1,4 @@
-<% @list.image_url = cl_image_path(@list.photo.key, height: 350, width: 1400, crop: :fill) if @list.photo.key %>
+<--% @list.image_url = cl_image_path(@list.photo.key, height: 350, width: 1400, crop: :fill) if @list.photo.key %-->
 
 <div class="banner" style="background-image: url('<%= asset_path(@list.image_url) %>')">
   <h2>
