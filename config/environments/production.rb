@@ -38,10 +38,6 @@ Rails.application.configure do
 
   # Store uploaded files on the local file system (see config/storage.yml for options).
   config.active_storage.service = :cloudinary
-  require 'dotenv/load'  # Load environment variables from .env file
-
-  config.cloudinary.url = ENV['CLOUDINARY_URL']
-
 
   # Mount Action Cable outside main process or domain.
   # config.action_cable.mount_path = nil
