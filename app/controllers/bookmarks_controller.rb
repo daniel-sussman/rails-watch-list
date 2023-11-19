@@ -4,10 +4,10 @@ class BookmarksController < ApplicationController
     @bookmark = Bookmark.new(bookmark_params)
     @bookmark.list = @list
     if @bookmark.save
-      # unless @list.photo.key
+      if !@list.photo.key
         genre_id = find_most_common_genre(@list)
         @list.image_url = Genre.find(genre_id).image_url
-      # end
+      end
       @list.save
       redirect_to @list
     else
