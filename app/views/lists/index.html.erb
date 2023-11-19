@@ -16,10 +16,9 @@
     <div class="card-container mb-3">
       <% @lists.each do |list| %>
         <%= link_to list_path(list) do %>
-        <% if list.photo.key %>
-          <%= cl_image_path(list.photo.key, height: 300, width: 550, crop: :fit) %>
-        <% end %>
-        <--% list.image_url = cl_image_path(list.photo.key, height: 300, width: 550, crop: :fit) if list.photo.key %-->
+          <% if list.photo.key %>
+            <% list.image_url = cl_image_path(list.photo.key, height: 300, width: 550, crop: :fit) %>
+          <% end %>
           <div class="card" style="background-image: url('<%= image_path(list.image_url) %>');">
             <h2><%= list.name %></h2>
           </div>
